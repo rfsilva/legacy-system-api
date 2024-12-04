@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://www.rodrigo.com.br/dataintegration/legacysystem/model/gen">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:insertObject>
+			<gs:object>
+				<gs:description>AUTODESCRIPTION</gs:description>
+				<gs:correlationId>3905359350</gs:correlationId>
+				<gs:mainData>SELF INFORMATION PROVIDED BY MYSELF</gs:mainData>
+				<gs:option>KXPTO</gs:option>
+				<gs:conversionStatus>D</gs:conversionStatus>
+				<gs:channel>CHANEL</gs:channel>
+				<gs:stepCode>23</gs:stepCode>
+				<gs:networkIpAddress>10.20.30.40</gs:networkIpAddress>
+			</gs:object>
+        </gs:insertObject>
+    </soapenv:Body>
+</soapenv:Envelope>

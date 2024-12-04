@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.rodrigo.com.br/dataintegration/legacysystem/model/gen"
+           targetNamespace="http://www.rodrigo.com.br/dataintegration/legacysystem/model/gen" elementFormDefault="qualified">
+
+    <xs:element name="insertObject">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="object" type="tns:object"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="insertObjectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="legacyId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="object">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="correlationId" type="xs:string"/>
+            <xs:element name="mainData" type="xs:string"/>
+            <xs:element name="option" type="xs:string"/>
+            <xs:element name="conversionStatus" type="xs:string"/>
+            <xs:element name="channel" type="xs:string"/>
+            <xs:element name="stepCode" type="xs:string"/>
+            <xs:element name="networkIpAddress" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: legacy-system-api
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/data-integration-realm
+
+server:
+  port: 8084

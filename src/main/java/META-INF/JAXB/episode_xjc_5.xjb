@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este arquivo foi gerado pela Eclipse Implementation of JAXB, v3.0.0 
+Consulte https://eclipse-ee4j.github.io/jaxb-ri 
+Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+Gerado em: 2024.12.03 às 05:35:33 PM BRT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.rodrigo.com.br/dataintegration/legacysystem/model/gen">
+    <schemaBindings map="false">
+      <package name="br.com.rodrigo.dataintegration.legacysystem.model.gen"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.Country"/>
+    </bindings>
+    <bindings scd="tns:insertObject">
+      <class ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.InsertObject"/>
+    </bindings>
+    <bindings scd="~tns:object">
+      <class ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.Object"/>
+    </bindings>
+    <bindings scd="tns:insertObjectResponse">
+      <class ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.InsertObjectResponse"/>
+    </bindings>
+    <bindings scd="~tns:currency">
+      <typesafeEnumClass ref="br.com.rodrigo.dataintegration.legacysystem.model.gen.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
+

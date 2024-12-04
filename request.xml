@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://www.rodrigo.com.br/dataintegration/legacysystem/model/gen">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getCountryRequest>
+            <gs:name>Spain</gs:name>
+        </gs:getCountryRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
