@@ -1,14 +1,11 @@
 package br.com.rodrigo.dataintegration.legacysystem.repository;
 
 import br.com.rodrigo.dataintegration.legacysystem.entity.*;
-import org.springframework.stereotype.*;
+import org.springframework.data.jpa.repository.*;
 
-import java.util.*;
+public interface ObjectRepository extends JpaRepository<DBObject, Long> {
 
-@Component
-public class ObjectRepository {
+    @Query(value = "select BUS_OBJ_SEQ.nextval from dual", nativeQuery = true)
+    Long getNextSequential();
 
-    public String insertObject(DBObject object) {
-        return UUID.randomUUID().toString();
-    }
 }

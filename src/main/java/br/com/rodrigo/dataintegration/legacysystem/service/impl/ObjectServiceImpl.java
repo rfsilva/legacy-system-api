@@ -1,5 +1,6 @@
 package br.com.rodrigo.dataintegration.legacysystem.service.impl;
 
+import br.com.rodrigo.dataintegration.legacysystem.entity.*;
 import br.com.rodrigo.dataintegration.legacysystem.entity.mapper.*;
 import br.com.rodrigo.dataintegration.legacysystem.model.gen.*;
 import br.com.rodrigo.dataintegration.legacysystem.repository.*;
@@ -16,8 +17,11 @@ public class ObjectServiceImpl implements ObjectService {
     private ObjectRepository objectRepository;
 
     @Override
-    public String insert(InsertObject object) {
+    public Long insert(InsertObject object) {
         log.info("Inserting legacy object: {}", object.getObject().getCorrelationId());
-        return objectRepository.insertObject(DBObjectMapper.toEntity(object));
+        DBObject entity = DBObjectMapper.toEntity(object.getObject());
+        entity.setId(objectRepository.getNextSequential());
+        objectRepository.save(entity);
+        return entity.getId();
     }
 }

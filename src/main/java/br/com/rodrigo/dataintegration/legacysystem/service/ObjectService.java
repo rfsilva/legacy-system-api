@@ -4,5 +4,5 @@ import br.com.rodrigo.dataintegration.legacysystem.model.gen.*;
 
 public interface ObjectService {
 
-    String insert(InsertObject object);
+    Long insert(InsertObject object);
 }

@@ -16,9 +16,9 @@ public class ObjectEndpoint {
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "insertObject")
     @ResponsePayload
     public InsertObjectResponse insertObject(@RequestPayload InsertObject request) {
-        String legacyId = objectService.insert(request);
+        Long legacyId = objectService.insert(request);
         InsertObjectResponse response = new InsertObjectResponse();
-        response.setLegacyId(legacyId);
+        response.setLegacyId(String.valueOf(legacyId));
         return response;
     }
 }

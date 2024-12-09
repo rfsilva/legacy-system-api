@@ -2,22 +2,29 @@ package br.com.rodrigo.dataintegration.legacysystem.entity.mapper;
 
 import br.com.rodrigo.dataintegration.legacysystem.entity.*;
 import br.com.rodrigo.dataintegration.legacysystem.model.gen.*;
+import br.com.rodrigo.dataintegration.legacysystem.model.gen.Object;
+
+import java.time.*;
+import java.util.*;
 
 public final class DBObjectMapper {
+
+    private static Random random = new Random();
 
     private DBObjectMapper() {
     }
 
-    public static DBObject toEntity(InsertObject obj) {
+    public static DBObject toEntity(Object obj) {
         return DBObject.builder()
-                .correlationId(obj.getObject().getCorrelationId())
-                .description(obj.getObject().getDescription())
-                .conversionStatus(obj.getObject().getConversionStatus())
-                .networkIpAddress(obj.getObject().getNetworkIpAddress())
-                .option(obj.getObject().getOption())
-                .stepCode(obj.getObject().getStepCode())
-                .channel(obj.getObject().getChannel())
-                .mainData(obj.getObject().getMainData())
+                .correlationId(obj.getCorrelationId())
+                .description(obj.getDescription())
+                .conversionStatus(obj.getConversionStatus())
+                .networkIpAddress(obj.getNetworkIpAddress())
+                .option(obj.getOption())
+                .stepCode(obj.getStepCode())
+                .channel(obj.getChannel())
+                .mainData(obj.getMainData())
+                .insertionDate(LocalDateTime.now())
                 .build();
     }
 }
