@@ -5,11 +5,11 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/data-integration-realm
+          issuer-uri: ${KEYCLOAK_ISSUER_URI}
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
-    username: datainteg
-    password: datainteg
+    url: ${LEGACY_SYSTEM_DB_URL}
+    username: ${LEGACY_SYSTEM_DB_USERNAME}
+    password: ${LEGACY_SYSTEM_DB_PASSWORD}
     driver-class-name: oracle.jdbc.OracleDriver
     jpa:
       hibernate:
